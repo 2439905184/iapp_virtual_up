@@ -1,0 +1,31 @@
+//按下瞬间的x
+import android.view.*;
+public float pre_x;
+public float pre_y;
+//按下
+public float caculate_x(float pressX)
+{
+ pre_x=pressX;
+//  syso(pressX);
+  return pre_x;
+  }
+  public float caculate_y(float pressY)
+  {
+    pre_y=pressY;
+    return pre_y;
+    }
+  //计算偏移
+  public float c_offest_x(float rx)
+  {
+//  View v=  new View();
+    float offest_x=rx-pre_x;
+   // syso("移动后"+moved_x);
+    return  offest_x;
+    }
+    
+    public float c_offest_y(float ry)
+    {
+      float offest_y=ry-pre_y;
+      return offest_y;
+      }
+  

@@ -1,0 +1,10 @@
+<View id="1" did="0" type="SurfaceView">
+<ppt>width=-1
+height=-1
+//BackgroundColor=#ff00ffef</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">usxh(d,1,90)
+syso(d)
+tw("载入事件")
+syso("另外的载入事件")</eventItme></UIEventset>

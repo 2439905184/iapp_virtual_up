@@ -1,0 +1,142 @@
+<View id="3" did="0" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+BackgroundColor=#ffff1a00</ppt>
+<event><eventItme type="touchmonitor">//syso("监听")
+s offest_x
+f(st_eA==0)
+{
+  //tw("按下了")
+  call(l,"mjava","c.caculate_x",st_eX)
+  call(o,"mjava","c.caculate_y",st_eY)
+}
+else f(st_eA==2)
+{
+  call(n,"mjava","c.c_offest_x",st_rX)
+  call(offest_y,"mjava","c.c_offest_y",st_rY)
+ // syso("偏移x:"+x)
+//syso("offest_x:"+n)
+ us(sss.v,"x",n)
+ us(sss.v,"y",offest_y)
+ //us(sss.v,"y",st_eY)
+uxf(sss.v)
+//syso(sss.v)
+ }
+</eventItme><eventItme type="clicki">//call(f,"mjava","c.caculate_x")
+//syso(f)
+/.这是四个源码，大家看好了
+第一个界面线性布局源码
+width=-1
+height=-1
+orientation=vertical
+gravity=center
+
+悬浮窗开启按钮源码
+s w = 200
+s h = 200
+s g = "top|left"
+uxf("mr.iyu",w,h,g,sss.mr)
+
+悬浮窗关闭按钮源码
+uxf(sss.mr,"del")
+
+悬浮窗移动源码
+//在屏幕上滑动时候
+f(st_eA == 2)
+{
+//计算当前滑动的距离，如果滑动距离短就不移动了
+s-(st_rX, sss.rX, x)
+s-(st_rY, sss.rY, y)
+
+//判断是否够格移动悬浮
+f(sss.rXY == true || x&gt;80 || x80 || y-80)
+{
+//记录本次直到结束释放触屏都可移动悬浮
+sss rXY = true
+//悬浮拖动的位置偏移
+s-(40, st_rX)
+s-(80, st_rY)
+//设置悬浮位置
+us(sss.mr, "x", st_rX)
+us(sss.mr, "y", st_rY)
+//如果手动创建的界面没有命名为mr的话就需要把上方的mr改为你自己的界面名称
+//刷新悬浮
+uxf(sss.mr)
+//这里也改 如果你手动创建的界面命名为mr了无视即可
+}
+}
+else f(st_eA == 0)
+{
+//当按下屏幕时候记录开始的坐标
+sss rX = st_rX
+sss rY = st_rY
+//初始化
+sss rXY = false
+}./</eventItme><eventItme type="press">tw("长按")</eventItme></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=按住来拖动
+textColor=#fff6ff00
+textSize=30sp</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="Button">
+<ppt>width=-2
+height=-2
+text=大小+1</ppt>
+<event><eventItme type="clicki">ug(sss.v,"width",w)
+syso(w)
+ug(sss.v,"height",h)
+s+(150,w,w)
+s+(150,h,h)
+s x=0
+s y=0
+s g="top|left"
+uxf(sss.v,"set",x,y,w,h,g)
+uxf(sss.v)</eventItme></event>
+</View>
+<View id="6" did="3" type="Button">
+<ppt>width=-2
+height=-2
+text=关闭悬浮</ppt>
+<event><eventItme type="clicki">uxf(sss.v,"del")</eventItme></event>
+</View>
+<View id="8" did="3" type="Button">
+<ppt>width=-2
+height=-2
+text=打开</ppt>
+<event><eventItme type="clicki">//us(sss.show_camera,"background","@icon_iapp.png)
+tw("技术难题 人脸识别")
+addv(3,"camera.iyu")</eventItme></event>
+</View>
+<View id="9" did="3" type="ImageView">
+<ppt>width=-2
+height=-2
+</ppt>
+<event></event>
+</View>
+<View id="7" did="3" type="SurfaceView">
+<ppt>width=200dp
+height=200dp
+//background=@icon_iapp.png</ppt>
+<event></event>
+</View>
+<View id="11" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+BackgroundColor=#ff00d0ff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loadingComplete">
+//tw("悬浮窗载入完成",1)
+addv(11,"camera.iyu")
+</eventItme><eventItme type="loading">t()
+{
+syso("悬浮窗载入事件",1)
+usxh(sss.sx,7,90)
+syso("悬浮窗摄像"+sss.sx)
+//gvs(7,sss.show_camera)
+}</eventItme></UIEventset>

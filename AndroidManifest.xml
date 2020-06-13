@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title>vup虚拟主播悬浮</title>
+<icon>icon.png</icon>
+<packageName>com.hh128.vupAndroid</packageName>
+<versionName>1.0</versionName>
+<versionint>1</versionint>
+<sdk>15</sdk>
+<yuv>3</yuv>
+<remark></remark>
+<Permissions>android.permission.REQUEST_INSTALL_PACKAGES
+android.permission.SYSTEM_ALERT_WINDOW
+android.permission.READ_EXTERNAL_STORAGE
+android.permission.CAMERA
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+android.permission.RECORD_AUDIO
+android.hardware.camera
+android.hardware.camera2
+android.hardware.camera.front
+android.hardware.camera.autofocus
+android.permission.FLASHLIGHT
+android.permission.WRITE_EXTERNAL_STORAGE</Permissions>
+<createTime>2020-06-12 06:09:31</createTime>
+<upTime>2020-06-12 06:09:31</upTime>

@@ -1,0 +1,99 @@
+<View id="13" did="0" type="TextView">
+<ppt>width=-2
+height=-2
+textSize=30sp
+text=vup安卓版 开发者128hh 待解决核心技术人脸识别 还有就是悬浮窗的问题 原软件是windows steam上的vup\n 不过我想做个个安卓版</ppt>
+<event></event>
+</View>
+<View id="4" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="6" did="4" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+ut_centerInParent=true</ppt>
+<event></event>
+</View>
+<View id="3" did="6" type="Button">
+<ppt>width=-2
+height=-2
+text=打开挂件模式</ppt>
+<event><eventItme type="clicki">s w=-2
+s h=-2
+s g="top|left"
+uxf("layout.iyu", w, h, g, sss.v)
+syso(sss.v)
+//uxf(v)
+//syso(sss.v)
+//tw(sss.v)</eventItme></event>
+</View>
+<View id="5" did="6" type="Button">
+<ppt>width=-2
+height=-2
+text=关闭挂件模式</ppt>
+<event><eventItme type="clicki">uxf(sss.v,"del")</eventItme></event>
+</View>
+<View id="12" did="6" type="Button">
+<ppt>width=-2
+height=-2
+text=直接进入挂件页面 activity</ppt>
+<event><eventItme type="clicki">uigo("layout.iyu")</eventItme></event>
+</View>
+<View id="8" did="6" type="EditText">
+<ppt>width=-2
+height=-2
+text=
+hint=请输入本地静态图片文件地址,如/sdcard/test.jpg</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="Button">
+<ppt>width=-2
+height=-2
+text=设置模型</ppt>
+<event><eventItme type="clicki">ug(8,"text",path)
+us(10,"background","@vup.jpeg")
+</eventItme></event>
+</View>
+<View id="9" did="6" type="SwitchCompat">
+<ppt>width=-2
+height=-2
+text=摄像头预览</ppt>
+<event><eventItme type="oncheckedchanged">syso(st_iC)
+f(st_iC==true)
+{
+  us(10,"visibility","visible")
+}
+else
+{
+  us(10,"visibility","gone")
+}</eventItme></event>
+</View>
+<View id="14" did="6" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="11" did="14" type="Button">
+<ppt>width=-2
+height=-2
+text=关闭静态模型</ppt>
+<event><eventItme type="clicki">us(10,"background","through")</eventItme></event>
+</View>
+<View id="15" did="14" type="Button">
+<ppt>width=-2
+height=-2
+text=进入全屏摄像界面</ppt>
+<event><eventItme type="clicki">uigo("camera.iyu")</eventItme></event>
+</View>
+<View id="10" did="4" type="SurfaceView">
+<ppt>width=200dp
+height=200dp
+visibility=invisible</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">usxq(ss.preview,10,90)
+//usxh(sss.sx,7,90)</eventItme></UIEventset>
